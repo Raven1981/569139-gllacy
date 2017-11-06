@@ -1,0 +1,22 @@
+.sliders-controls label {
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+			margin: 5px;
+    	}
+
+    	.slide {
+    		display: none;
+    	}
+
+    	#slide-1:checked ~ .background .slide:nth-child(1) {
+    		display: block;
+    	}
+
+    	#slide-2:checked ~ .background .slide:nth-child(2) {
+    		display: block;
+    	}
+
+    	#slide-3:checked ~ .background .slide:nth-child(3) {
+    		display: block;
+    	}
