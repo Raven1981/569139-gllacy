@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-	    <meta charset="utf-8">
-	    <title>HTML Academy: Глейси</title>
-	    <link rel="stylesheet" type="text/css" href="css/style.css" >
+		<meta charset="utf-8">
+		<title>HTML Academy: Глейси</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" >
 	</head>
-  	<body>
-	  	<input id="slide-1" type="radio" name="slider" checked>
-	  	<input id="slide-2" type="radio" name="slider">
-	  	<input id="slide-3" type="radio" name="slider">
+	<body>
+		<input id="slide-1" type="radio" name="slider" checked>
+		<input id="slide-2" type="radio" name="slider">
+		<input id="slide-3" type="radio" name="slider">
 
 		<div class="background">
-		  	<!--Шапка сайта-->
+			<!--Шапка сайта-->
 			<header class="main-header">
 				<nav class="main-navigation">
 					<div class="logo">
-						<img src="img/index-logo.svg" alt="Логотип компании">
+						<img src="http://placehold.it/154x64" width="154" height="64" alt="Логотип компании">
 					</div>
 					<ul class="top-navigation">
 						<li><a href="catalog.html">Каталог</a>
@@ -35,23 +35,33 @@
 							<!--Выпадающее окно поиска -->
 							<div class="drop-search">
 								<form action="search.html" method="GET">
-									<input type="text" id="search">
-									<label for="search">Что ищем?</label>
+									<div class="drop-search-container">
+										<input type="text" id="search">
+										<label for="search">Что ищем?</label>
+									</div>
 								</form>
 							</div>
 						</li>
 						<li class="user-enter">Вход
 							<!-- Выпадающее окно входа в личный кабинет -->
 							<div class="drop-enter">
-								<form action="login.html" method="POST">
-									<input id="drop-enter-email" type="email">
-									<label for="drop-enter-email">Электронная почта</label><br>
-									<input id="drop-enter-password" type="password">
-									<label for="drop-enter-password">Пароль</label><br>
-									<input type="submit" value="Войти"><br>
-									<div class="drop-right-block">
-										<a class="drop-remember-password" href="#">Забыли пароль?</a>
-										<a class="drop-register" href="#">Новая регистрация</a>
+								<form class="form-enter" action="login.html" method="POST">
+									<div class="drop-email-container">
+										<input id="drop-enter-email" type="email">
+										<label for="drop-enter-email">Электронная почта</label>
+									</div>
+
+									<div class="drop-email-container">
+										<input id="drop-enter-password" type="password">
+										<label for="drop-enter-password">Пароль</label>
+									</div>	
+
+									<div class="drop-bottom-block">
+										<input class="button-default" type="submit" value="Войти"><br>
+										<div class="drop-right-block">
+											<a class="drop-remember-password" href="#">Забыли пароль?</a>
+											<a class="drop-register" href="#">Новая регистрация</a>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -59,9 +69,12 @@
 						<li class="user-basket">Пусто</li>
 					</ul>
 				</nav>
-				<p>С 10 до 20, ежедневно<br>
-					<span class="main-header-phone"><a href="tel:+78124502525">8 812 450-25-25</a></span>
-				</p>
+				<div class="header-right-block">
+					<p>С 10 до 20, ежедневно</p>
+						<span class="main-header-phone">
+							<a href="tel:+78124502525">8 812 450-25-25</a>
+						</span>
+				</div>
 			</header>
 			<!--Главная область-->
 			<main>
@@ -75,14 +88,17 @@
 						</div>
 						<div class="slides">
 							<div class="slide">
+								<img src="http://placehold.it/765x580" width="765" height="580" alt="Крем-брюле и пломбир с малиновым джемом">
 								<h2>Крем-брюле и пломбир <br>с малиновым джемом</h2>
 								<a href="#" class="slider-button">Давайте оба!</a>
 							</div>
 							<div class="slide">
+								<img src="http://placehold.it/765x580" width="765" height="580" alt="Шоколадный пломбир и лимонный сорбет">
 								<h2>Шоколадный пломбир <br>и лимонный сорбет</h2>
 								<a href="#" class="slider-button">Давайте оба!</a>
 							</div>
 							<div class="slide">
+								<img src="http://placehold.it/765x580" width="765" height="580" alt="Пломбир с помадкой и клубничный щербет">
 								<h2>Пломбир с помадкой <br>и клубничный щербет</h2>
 								<a href="#" class="slider-button">Давайте оба!</a>
 							</div>
@@ -98,14 +114,14 @@
 							<li class="stock-list">
 								<h3>Малинка даром!</h3>
 								<p class="stock-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-			 					</p>
-			 					<button>Хочу варенье!</button>
+								</p>
+								<button class="button-default">Хочу варенье!</button>
 							</li>
 							<li class="stock-list">
 								<h3>Шоколадки даром!</h3>
 								<p class="stock-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-			 					</p>
-			 					<button>Хочу шоколадки!</button>
+								</p>
+								<button class="button-default">Хочу шоколадки!</button>
 							</li>
 						</ul>
 					</div>	
@@ -117,48 +133,56 @@
 						<h2 class="visualy-hidden">Хиты продаж</h2>
 							<ul class="hits-list">
 								<li class="hit-item">
-									<a href="catalog-item.html">
-										<img src="/img/#" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+									<a class="hit-wrapper-item" href="catalog-item.html">
+										<img src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+										<div class="hit-price-weight">
+											<span class="hit-price">310</span>
+											<span class="hit-weight">кг</span>
+										</div>	
 									</a>
-									<span class="hit-price">310</span>
-									<span class="hit-weight">кг</span>
 									<h3>
-										<a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+										<a class="hit-link" href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 									</h3>
-									<a href="catalog-item.html">Быстрый просмотр</a>
+									<a class="button-default" href="catalog-item.html">Быстрый просмотр</a>
 								</li>	
 								<li class="hit-item">
-									<a href="catalog-item.html">
-										<img src="/img/#" alt="Сливочно-кофейное с кусочками шоколада">
+									<a class="hit-wrapper-item" href="catalog-item.html">
+										<img src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-кофейное с кусочками шоколада">
+										<div class="hit-price-weight">
+											<span class="hit-price">380</span>
+											<span class="hit-weight">кг</span>
+										</div>
 									</a>	
-									<span class="hit-price">380</span>
-									<span class="hit-weight">кг</span>
 									<h3>
-										<a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
+										<a class="hit-link" href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
 									</h3>
-									<a href="catalog-item.html">Быстрый просмотр</a>
+									<a class="button-default" href="catalog-item.html">Быстрый просмотр</a>
 								</li>
 								<li class="hit-item">
-									<a href="catalog-item.html">
-										<img src="/img/#" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+									<a class="hit-wrapper-item" href="catalog-item.html">
+										<img src="http://placehold.it/270x270" width="270" height="270" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+										<div class="hit-price-weight">
+											<span class="hit-price">355</span>
+											<span class="hit-weight">кг</span>
+										</div>
 									</a>	
-									<span class="hit-price">355</span>
-									<span class="hit-weight">кг</span>
 									<h3>
-										<a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+										<a class="hit-link" href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
 									</h3>
-									<a href="catalog-item.html">Быстрый просмотр</a>
+									<a class="button-default" href="catalog-item.html">Быстрый просмотр</a>
 								</li>
 								<li class="hit-item">
-									<a href="catalog-item.html">
-										<img src="/img/#" alt="Сливочное крем-брюле с карамельной подливкой">
+									<a class="hit-wrapper-item" href="catalog-item.html">
+										<img src="http://placehold.it/270x270" width="270" height="270" alt="Сливочное крем-брюле с карамельной подливкой">
+										<div class="hit-price-weight">
+											<span class="hit-price">415</span>
+											<span class="hit-weight">кг</span>
+										</div>
 									</a>	
-									<span class="hit-price">415</span>
-									<span class="hit-weight">кг</span>
 									<h3>
-										<a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
+										<a class="hit-link" href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
 									</h3>	
-									<a href="catalog-item.html">Быстрый просмотр</a>
+									<a class="button-default" href="catalog-item.html">Быстрый просмотр</a>
 								</li>
 							</ul>
 						</div>	
@@ -195,10 +219,12 @@
 						<!-- Блок с рассылкой-->
 						<div class="mailing">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-							<form>
-								<input id="mailing-email" type="email">
-								<label for="mailing-email">Электронная почта</label><br>
-								<input type="submit" value="Отправить">
+							<form class="form-mailing">
+								<div class="mailig-container">
+									<input id="mailing-email" type="email">
+									<label for="mailing-email">Электронная почта</label>
+								</div>
+								<input class="button-default" type="submit" value="Отправить">
 							</form>
 						</div>
 					</div>
@@ -206,6 +232,7 @@
 				<!--Блок с картой-->
 				<section class="map">
 					<h2 class="visualy-hidden">Карта с адресом</h2>
+					<img src="http://placehold.it/1200x432" width="1200" height="432" alt="Карта с адресом">
 					<div class="description-container">			
 						<p>Адрес главного офиса  и офлайн-магазина:<br>
 							<span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -214,7 +241,7 @@
 							<span><a href="tel:+78124502525">8 812 450-25-25</a></span><br>
 							(с 10 до 20 ежедневно)
 						</p>
-						<button>Форма обратной связи</button>
+						<button class="button-default">Форма обратной связи</button>
 					</div>
 				</section>
 			</main>
@@ -241,8 +268,8 @@
 				<!--Меню в подвале -->
 				<nav class="footer-navigation">
 					<h2 class="visualy-hidden">Навигация в подвале</h2>
-					<ul>
-						<li><a href="supplier.html"><b>Для поставщиков</b></a></li>
+					<ul class="bottom-navigation">
+						<li class="footer-heart"><a href="supplier.html"><b>Для поставщиков</b></a></li>
 						<li><a href="documents.html">Наши документы</a></li>
 						<li><a href="manufacture.html">О производстве</a></li>
 						<li><a href="environmental-standards.html">Экологические стандарты</a></li>
@@ -251,7 +278,9 @@
 				<!--Разработчик -->
 				<div class="development">
 					<h2 class="visualy-hidden">Разработчик сайта</h2>
-					<a href="http://http://ya.ru" target="_blank"><img src="img/" alt="Логотип разработчика"></a>
+					<a href="http://http://ya.ru" target="_blank">
+						<img src="http://placehold.it/108x39" width="108" height="39" alt="Логотип разработчика">
+					</a>
 					<p class="copyright">Сделано в HTML Academy © 2017</p>
 				</div>
 			</footer>
@@ -260,18 +289,24 @@
 
 		<!-- Модальное окно с формой обратной связи -->
 		<div class="modal-callback">
-			<form>
+			<form class="form-callback">
 				<p>Мы обязательно вам ответим</p>
-				<input id="modal-callback-name" type="text">
-				<label for="modal-callback-name">Как вас зовут</label><br>
+				<div class="callback-name-container">
+					<input id="modal-callback-name" type="text">
+					<label for="modal-callback-name">Как вас зовут</label>
+				</div>
 
-				<input id="modal-callback-email" type="email">
-				<label for="modal-callback-email">Ваша почта для ответа</label><br>
+				<div class="callback-email-container">
+					<input id="modal-callback-email" type="email">
+					<label for="modal-callback-email">Ваша почта для ответа</label>
+				</div>
 
-				<textarea id="modal-callback-text"></textarea>
-				<label for="modal-callback-text">Напишите что-нибудь</label><br>
+				<div class="callback-text-container">
+					<textarea id="modal-callback-text"></textarea>
+					<label for="modal-callback-text">Напишите что-нибудь</label>
+				</div>
 
-				<input type="submit" value="Отправить">
+				<input class="button-default" type="submit" value="Отправить">
 			</form>
 		</div>	
 	</body>
