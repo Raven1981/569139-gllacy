@@ -57,7 +57,7 @@
 									</div>	
 
 									<div class="drop-bottom-block">
-										<input class="button-default" type="submit" value="Войти"><br>
+										<button class="button-default" type="submit">Войти</button><br>
 										<div class="drop-right-block">
 											<a class="drop-remember-password" href="#">Забыли пароль?</a>
 											<a class="drop-register" href="#">Новая регистрация</a>
@@ -115,13 +115,14 @@
 								<h3>Малинка даром!</h3>
 								<p class="stock-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
 								</p>
+								<a href="#" class="stock-link">Хочу варенья!</a>
 								<button class="button-default">Хочу варенье!</button>
 							</li>
 							<li class="stock-list">
 								<h3>Шоколадки даром!</h3>
 								<p class="stock-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
 								</p>
-								<button class="button-default">Хочу шоколадки!</button>
+								<a href="#" class="stock-link">Хочу шоколадки!</a>
 							</li>
 						</ul>
 					</div>	
@@ -219,11 +220,12 @@
 						<!-- Блок с рассылкой-->
 						<div class="mailing">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-							<form class="form-mailing">
+							<form class="form-mailing" action="#" method="POST">
 								<div class="mailig-container">
 									<input id="mailing-email" type="email">
 									<label for="mailing-email">Электронная почта</label>
 								</div>
+								<!--<button class="button-default" type="submit">Отправить</button>-->
 								<input class="button-default" type="submit" value="Отправить">
 							</form>
 						</div>
@@ -232,9 +234,9 @@
 				<!--Блок с картой-->
 				<section class="map">
 					<h2 class="visualy-hidden">Карта с адресом</h2>
-					<img src="img/map.jpg" width="1200" height="432" alt="Карта с адресом">
+					<img src="img/map.jpg" width="1200" height="432" alt="Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
 					<div class="description-container">			
-						<p>Адрес главного офиса  и офлайн-магазина:<br>
+						<p>Адрес главного офиса и офлайн-магазина:<br>
 							<span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 						</p>
 						<p>Для заказов по телефону:<br>
@@ -289,7 +291,7 @@
 
 		<!-- Модальное окно с формой обратной связи -->
 		<div class="modal-callback">
-			<form class="form-callback">
+			<form class="form-callback" action="#" method="POST">
 				<p>Мы обязательно вам ответим</p>
 				<div class="callback-name-container">
 					<input id="modal-callback-name" type="text">
@@ -305,9 +307,9 @@
 					<textarea id="modal-callback-text"></textarea>
 					<label for="modal-callback-text">Напишите что-нибудь</label>
 				</div>
-
-				<input class="button-default" type="submit" value="Отправить">
+				<button class="button-default" type="submit">Отправить</button>
 			</form>
+			<button class="form-callback-close" type="button">Закрыть</button>
 		</div>	
 	</body>
 </html>

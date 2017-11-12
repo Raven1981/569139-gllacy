@@ -12,7 +12,7 @@
 				<nav class="main-navigation">
 					<div class="logo">
 						<a href="index.html">
-							<img src="http://placehold.it/154x64" width="154" height="64" alt="Логотип компании">
+							<img src="img/index-logo.svg" width="154" height="64" alt="Логотип компании">
 						</a>	
 					</div>
 					<ul class="top-navigation">
@@ -55,7 +55,7 @@
 									</div>	
 
 									<div class="drop-bottom-block">
-										<input type="submit" value="Войти" class="button-default"><br>
+										<button class="button-default" type="submit">Войти</button><br>
 										<div class="drop-right-block">
 											<a class="drop-remember-password" href="#">Забыли пароль?</a>
 											<a class="drop-register" href="#">Новая регистрация</a>
@@ -70,10 +70,12 @@
 								<h2 class="visualy-hidden">Корзина с товарами</h2>
 								<table class="drop-basket-items">
 									<tr class="drop-basket-item">
-										<td class="drop-close-marker">x</td>
+										<td class="drop-close-marker">
+											<button class="drop-basket-close" type="button">Закрыть</button>
+										</td>
 										<td class="drop-basket-img">
 											<a href="#">
-												<img src="http://placehold.it/33x33" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+												<img src="img/catalog-item1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
 											</a>
 										</td>
 										<td class="drop-basket-name">
@@ -83,10 +85,12 @@
 										<td class="drop-basket-price">300 руб</td>
 									</tr>
 									<tr class="drop-basket-item">
-										<td class="drop-close-marker">x</td>
+										<td class="drop-close-marker">
+											<button class="drop-basket-close" type="button">Закрыть</button>
+										</td>
 										<td class="drop-basket-img">
 											<a href="#">
-												<img src="http://placehold.it/33x33" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+												<img src="img/catalog-item3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
 											</a>
 										</td>
 										<td class="drop-basket-name">
@@ -124,14 +128,14 @@
 				<!--Фильтры -->
 				<section class="filters">
 					<h2 class="visualy-hidden">Фильтр товаров</h2>
-					<form class="form-filter">
+					<form class="form-filter" action="#" method="GET">
 						<div class="filter">
 							<p>Сортировка</p>
-							<select>
-								<option selected>по популярности</option>
-								<option>сначала недорогие</option>
-								<option>сначала дорогие</option>
-								<option>по жирности</option>
+							<select name="sort[]" class="filter-sort">
+								<option value="popular" selected>по популярности</option>
+								<option value="cheap">сначала недорогие</option>
+								<option value="exspensive">сначала дорогие</option>
+								<option value="fat">по жирности</option>
 							</select>
 						</div>	
 
@@ -145,31 +149,38 @@
 
 						<div class="filter">
 							<p>Жирность:</p>
-							<input type="radio">0%<br>
-							<input type="radio" checked>до 20%<br>
-							<input type="radio">до 30%<br>
-							<input type="radio">выше 30%<br>
+							<input type="radio" id="filter-fatness-zero" name="filter-fatness" value="0">
+							<label for="filter-fatness-zero">0%</label><br>
+
+							<input type="radio" id="filter-fatness-till20" name="filter-fatness" value="till20" checked>
+							<label for="filter-fatness-till20">до 20%</label><br>
+
+							<input type="radio" id="filter-fatness-till30" name="filter-fatness" value="till30">
+							<label for="filter-fatness-till30">до 30%</label><br>
+
+							<input type="radio" id="filter-fatness-over30" name="filter-fatness" value="over30">
+							<label for="filter-fatness-over30">выше 30%</label><br>
 						</div>	
 
 						<div class="filter">
 							<p>Наполнители:</p>
-							<input type="checkbox" id="chocolate" checked>
-							<label for="chocolate">шоколадные</label>
+							<input type="checkbox" id="filter-extender-chocolate" name="filter-chocolate" checked>
+							<label for="filter-extender-chocolate">шоколадные</label>
 
-							<input type="checkbox" id="sugar" checked>
-							<label for="sugar">сахарные присыпки</label>
+							<input type="checkbox" id="filter-extender-sugar" name="filter-sugar" checked>
+							<label for="filter-extender-sugar">сахарные присыпки</label>
 
-							<input type="checkbox" id="fruit">
-							<label for="fruit">фрукты</label>
+							<input type="checkbox" id="filter-extender-fruits" name="filter-ruits">
+							<label for="filter-extender-fruits">фрукты</label>
 
-							<input type="checkbox" id="syrup">
-							<label for="syrup">сиропы</label>
+							<input type="checkbox" id="filter-extender-syrups" name="filter-syrups">
+							<label for="filter-extender-syrups">сиропы</label>
 
-							<input type="checkbox" id="jam">
-							<label for="jam">джемы</label>
+							<input type="checkbox" id="filter-extender-jams" name="jams">
+							<label for="filter-extender-jams">джемы</label>
 						</div>
 
-						<input type="submit" value="Применить">
+						<button class="filters-button-default" type="submit">Применить</button>
 					</form>
 				</section>
 				<!--Список товаров -->
@@ -378,7 +389,7 @@
 				<div class="development">
 					<h2 class="visualy-hidden">Разработчик сайта</h2>
 					<a href="http://http://ya.ru" target="_blank">
-						<img src="http://placehold.it/108x39" alt="Логотип разработчика">
+						<img src="img/logo-footer.svg" width="132" height="39" alt="Логотип разработчика">
 					</a>
 					<p class="copyright">Сделано в HTML Academy © 2017</p>
 				</div>
